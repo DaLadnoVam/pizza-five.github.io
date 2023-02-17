@@ -19,16 +19,19 @@ const btnClose = document.querySelector('#btn-close');
 
 card.addEventListener('click', () => {
     cardInfo.classList.add('open')
+    document.body.style.overflow = 'hidden'
 } )
 
 cardInfo.addEventListener('click', (event) => {
     if(event.target.nodeName === 'A') {
         cardInfo.classList.remove('open');
+        document.body.style.overflow = 'visible'
       }
 })
 
 btnClose.addEventListener('click', () => {
-    cardInfo.classList.remove('open')
+    cardInfo.classList.remove('open');
+    document.body.style.overflow = 'visible'
 });
 
 // библиотека перехода страниц
@@ -101,4 +104,5 @@ const btnBurger = document.querySelector('#burger');
 
 btnBurger.addEventListener('click', () => {
   burgerEl.classList.toggle('open')
+
 })

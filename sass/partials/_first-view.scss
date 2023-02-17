@@ -10,9 +10,9 @@
         &.slick-active,
         &.slick-current{
             display: block;
-            width: 1590px;
+            max-width: 1590px;
             margin: 0 auto;
-
+            
         }
     }
     .slick-list{
@@ -29,23 +29,28 @@
             display: block;
             width: 100%;
             height: 100%;
+            object-fit: contain;
         }
     }
     .slick-arrow{
         width: 68px;
         height: 68px;
+        border: 0px solid transparent;
         border-radius: 50%;
-        border: 2px solid #FF5722;
-        background-color: transparent;
         font-size: 0;
         padding: 0;
         z-index: 2;
+        cursor: pointer;
         &.slick-prev{
             position: absolute;
             top: 50%;
             left: 0;
+            background: url(./../arr-right.png) center / 100% no-repeat;
+            transform: rotate(180deg);
+
         }
         &.slick-next{
+            background: url(../../arr-right.png) center / 100% no-repeat;
             position: absolute;
             top: 50%;
             right: 0;
