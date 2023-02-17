@@ -1,0 +1,160 @@
+.card-wrap{
+    display: none;
+    &.open{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        overflow: hidden;
+    }
+}
+
+.shopping-card{
+    display: block;
+    max-width: 700px;
+    height: 829px;
+    background: #F3DDD4;
+    border-radius: 24px;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 32px 20px 21px 20px;
+    @media (max-width: 1023px){
+        max-width: 500px;
+        height: 700px;
+        top: 25px;
+    }
+    @media (max-width: 768px){
+        max-width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        border-radius: 0;
+    }
+    .btn-close{
+        display: block;
+        background: white url(../../images/close.png) center / 45% no-repeat;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        width: 62px;
+        height: 40px;
+        border: 2px solid #FF5722;
+        // 
+        border-radius: 15px;
+        cursor: pointer;
+        &:hover,
+        &:focus{
+            box-shadow: 0px 3px 16px #FF5722;
+            background: #FFCCBC url(../../images/close.png) center / 45% no-repeat;
+        }
+    }
+    .card-title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 45px;
+        color: #151212;
+    }
+    input{
+        height: 51px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 2px solid #FF5722;
+        border-radius: 16px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 37px;
+        color: #151212;
+        margin-bottom: 14px;
+        padding: 7px 8px;
+        &::placeholder{
+            color: #151212;
+        }
+
+        &:focus::placeholder{
+            color: rgba(128, 128, 128, 0.76);
+        }
+    }
+    input[name='name'] {
+        width: 148px;
+    }
+    input[name='tel'] {
+        width: 360px;
+    }
+    input[name='street'] {
+        width: 356px;
+    }
+    .input-layout{
+        display: flex;
+        gap: 5px;
+        input[type='text']{
+            width: 86px;
+        }
+    }
+    select{
+        box-sizing: border-box;
+        width: 360px;
+        height: 51px;
+        background: #FFFFFF;
+        border: 2px solid #FF5722;
+        border-radius: 16px;
+        margin-bottom: 14px;
+        padding: 7px 8px;
+    }
+    textarea{
+        box-sizing: border-box;
+        width: 360px;
+        height: 76px;
+        background: #FFFFFF;
+        border: 2px solid #FF5722;
+        border-radius: 16px;
+        margin-bottom: 14px;
+        padding: 7px 8px;
+        resize: none;
+    }
+    .payment{
+        box-sizing: border-box;
+        width: 100%;
+        height: 108px;
+        background: #FFFFFF;
+        border: 2px solid #FF5722;
+        border-radius: 16px;
+        margin-bottom: 14px;
+        p{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 37px;
+            color: #151212;
+            text-align: center;
+        }
+        &-wrap{
+            display: flex;
+        }
+    }
+    button[type='submit'] {
+        width: 338px;
+        height: 53px;
+        background: #FF5722;
+        border-radius: 16px;
+        border: none;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 45px;
+        color: #151212;
+        position: absolute;
+        bottom: 24px;
+        left: 28px;
+        cursor: pointer;
+        &:hover,
+        &:focus{
+            box-shadow: 0px 4px 16px #FF5722;
+        }
+    }
+}
